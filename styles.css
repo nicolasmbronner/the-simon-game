@@ -6,12 +6,10 @@ body {
 
 
 .container {
-  margin-top: 25px;
   display: grid;
   place-content: center;
   justify-items: center;
   height: 100svh;
-  grid-template: 22vmin 1fr / 70vmin;
 }
 
 #level-title {
@@ -19,6 +17,7 @@ body {
   font-size: 4vmin;
   color: #FEF2BF;
   line-height: 8vmin;
+  width: 70vmin;
 }
 
 .frame {
@@ -59,4 +58,9 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+.invisible {
+  margin-top: -100px;
+  visibility: hidden;
 }
