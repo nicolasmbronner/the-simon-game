@@ -78,5 +78,7 @@ function animatePress( currentColour ) {
 function startOver( ) {
     level = 0;
     gamePattern = [ ];
-    started = false;
+    setTimeout( function( ) {
+        started = false;
+    }, 1000 );
 }
