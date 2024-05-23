@@ -4,9 +4,10 @@ let   gamePattern = [ ],
       started = false,
       level = 0;
 
-$( document ).on( "keypress", function ( ) {
+$( document ).on( "mouseup", function ( ) {
     if ( !started ) {
         started = true;
+        $( ".frame" ).removeClass( "invisible" );
         $( '#level-title' ).text( "Level " + level );
         nextSequence( );
     }
@@ -32,13 +33,16 @@ function checkAnswer( currentLevel ) {
         }
 
     } else { // GAME OVER
-
+        
+        console.log( "Game Over" );
         playSound( "wrong" );
 
         $( 'body' ).addClass( 'game-over' );
         setTimeout( function( ) {
             $( 'body' ).removeClass( 'game-over' );
         }, 200 );
+
+        $( '.frame' ).addClass( 'invisible' );
 
         $( '#level-title' ).text( "Game Over, Press Any Button" );
         startOver( );
