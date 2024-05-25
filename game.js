@@ -64,8 +64,8 @@ function nextSequence( ) {
 }
 
 function playSound( name ) {
-    let sfx = new Audio( './sounds/' + name + ".mp3" );
-    sfx.play( );
+    // let sfx = new Audio( './sounds/' + name + ".mp3" );
+    // sfx.play( );
 }
 
 function animatePress( currentColour ) {
